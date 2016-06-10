@@ -23,7 +23,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		completion_reward = {
-				add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
+			add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 	focus = {
@@ -110,7 +110,7 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			add_tech_bonus = { bonus = 0.25 uses = 1 category = land_doctrine }
-			add_manpower = 100000
+			add_ideas = CHI_Hui_conscription
 		}
 	}
 		focus = {
@@ -214,12 +214,82 @@ focus_tree = {
 		}
 	}
 		focus = {
-		id = CHI_become_major
+		id = CHI_unify_china_cb
 		icon = GFX_goal_generic_position_armies
 		prerequisite = { focus = CHI_project_power }
 		prerequisite = { focus = CHI_industrial_might }
 		x = 10
 		y = 2
+		cost = 10
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = GXC
+				}
+				CHI = {
+				create_wargoal = { type = annex_everything target = GXC }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = YUN
+				}
+				CHI = {
+				create_wargoal = { type = annex_everything target = YUN }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = PRC
+				}
+				CHI = {
+				create_wargoal = { type = annex_everything target = PRC }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = SHX
+				}
+				CHI = {
+				create_wargoal = { type = annex_everything target = SHX }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = XSM
+				}
+				CHI = {
+				create_wargoal = { type = annex_everything target = XSM }
+				}
+			}
+			if = {
+				limit = {
+					country_exists = SIK
+				}
+				CHI = {
+				create_wargoal = { type = annex_everything target = SIK }
+				}
+			}
+		}
+	}
+		focus = {
+		id = CHI_become_major
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = CHI_unify_china_cb }
+		available = {
+		NOT = {
+			AND = {
+				country_exists = GXC
+				country_exists = YUN
+				country_exists = PRC
+				country_exists = SHX
+				country_exists = XSM
+				country_exists = SIK
+				}
+			}
+		}
+		x = 10
+		y = 3
 		cost = 10
 		completion_reward = {
 			set_major = yes
