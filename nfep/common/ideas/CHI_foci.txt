@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+		CHI_Hui_conscription = {
+			allowed = {
+				always = no
+			}
+			picture = generic_fascism_drift_bonus
+			
+			modifier = {
+				conscription = 0.001
+			}
+		}
+	}
+}
