@@ -23,7 +23,7 @@ focus_tree = {
 		y = 0
 		cost = 10
 		completion_reward = {
-				add_tech_bonus = { bonus = 1.0 uses = 1 category = land_doctrine }
+				add_tech_bonus = { bonus = 0.5 uses = 1 category = land_doctrine }
 		}
 	}
 	focus = {
@@ -64,7 +64,7 @@ focus_tree = {
 		y = 1
 		cost = 10
 		completion_reward = {
-			158 = {
+			608 = {
 				custom_effect_tooltip = CHI_defend_japanese_border_loc
 				hidden_effect = {
 					add_building_construction = {
@@ -144,9 +144,8 @@ focus_tree = {
 		y = 2
 		cost = 10
 		completion_reward = {
-			158 = {
-				custom_effect_tooltip = CHI_fortify_cities_loc
-				hidden_effect = {
+			605 = {
+				custom_effect_tooltip = CHI_fortify_cities_loc1
 				hidden_effect = {
 					add_building_construction = {
 						type = bunker
@@ -154,6 +153,11 @@ focus_tree = {
 						province = 4619
 						instant_build = yes
 					}
+				}
+			}
+			613 = {
+				custom_effect_tooltip = CHI_fortify_cities_loc2
+				hidden_effect = {
 					add_building_construction = {
 						type = bunker
 						level = 6
@@ -163,13 +167,13 @@ focus_tree = {
 					add_building_construction = {
 						type = bunker
 						level = 5
-						province = 12076
+						province = 7014
 						instant_build = yes
-					}
+							}
+						}
 					}
 				}
 			}
-		}
 	# Prestige
 		focus = {
 		id = CHI_redeem_international_prestige
@@ -391,24 +395,6 @@ focus_tree = {
 					}
 				}
 				CHI = { transfer_state = 524 }
-				}
-			if = {
-				limit = {
-					country_exists = JAP
-					JAP = {
-						owns_state = 525
-					}
-				}
-				CHI = { transfer_state = 525 }
-				}
-			if = {
-				limit = {
-					country_exists = JAP
-					JAP = {
-						owns_state = 527
-					}
-				}
-				CHI = { transfer_state = 527 }
 				}
 			if = {
 				limit = {
