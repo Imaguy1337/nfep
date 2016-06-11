@@ -5,9 +5,63 @@ ideas = {
 				always = no
 			}
 			picture = generic_fascism_drift_bonus
-			
 			modifier = {
 				conscription = 0.001
+			}
+		}
+	}
+	country = {
+		CHI_american_advisors = {
+			allowed = {
+				always = no
+			}
+			picture = generic_fascism_drift_bonus
+			research_bonus = {
+				industry = 0.05
+			}
+		}
+	}
+	country = {
+		CHI_embrace_communism = {
+			allowed = {
+				always = no
+			}
+			picture = generic_communism_drift_bonus
+			modifier = {
+				communism_drift = 0.1
+			}
+		}
+	}
+	country = {
+		CHI_embrace_democracy = {
+			allowed = {
+				always = no
+			}
+			picture = generic_communism_drift_bonus
+			modifier = {
+				democratic_drift = 0.1
+			}
+		}
+	}
+	country = {
+		CHI_embrace_fascism = {
+			allowed = {
+				always = no
+			}
+			picture = generic_communism_drift_bonus
+			modifier = {
+				fascism_drift = 0.1
+			}
+		}
+	}
+	country = {
+		CHI_PRC_antirevoluntionary_propoganda = {
+			allowed = {
+				always = no
+			}
+			picture = generic_fascism_drift_bonus
+			modifier = {
+				conscription = -0.01
 			}
 		}
 	}
