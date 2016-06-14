@@ -97,6 +97,12 @@ focus_tree = {
 						province = 11761
 						instant_build = yes
 					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = 10068
+						instant_build = yes
+					}
 				}
 			}
 		}
@@ -137,26 +143,15 @@ focus_tree = {
 		}
 	}
 		focus = {
-		id = CHI_fortify_cities
+		id = CHI_fortify_shanghai
 		icon = GFX_goal_generic_construct_military
 		prerequisite = { focus = CHI_defend_japanese_border }
 		x = 3
 		y = 2
 		cost = 10
 		completion_reward = {
-			605 = {
-				custom_effect_tooltip = CHI_fortify_cities_loc1
-				hidden_effect = {
-					add_building_construction = {
-						type = bunker
-						level = 5
-						province = 4619
-						instant_build = yes
-					}
-				}
-			}
 			613 = {
-				custom_effect_tooltip = CHI_fortify_cities_loc2
+				custom_effect_tooltip = CHI_fortify_cities_loc1
 				hidden_effect = {
 					add_building_construction = {
 						type = bunker
@@ -172,8 +167,83 @@ focus_tree = {
 							}
 						}
 					}
+		}
+	}
+		focus = {
+		id = CHI_fortify_wuhan
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = CHI_fortify_shanghai }
+		x = 3
+		y = 3
+		cost = 10
+		completion_reward = {
+			620 = {
+				custom_effect_tooltip = CHI_fortify_cities_loc2
+				hidden_effect = {
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 4619
+						instant_build = yes
+					}
 				}
 			}
+		}
+	}
+		focus = {
+		id = CHI_fortify_hunan
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = CHI_fortify_wuhan }
+		x = 3
+		y = 4
+		cost = 10
+		completion_reward = {
+			602 = {
+				custom_effect_tooltip = CHI_fortify_cities_loc3
+				hidden_effect = {
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 7097
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 7101
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+		focus = {
+		id = CHI_fortify_sichuan
+		icon = GFX_goal_generic_construct_military
+		prerequisite = { focus = CHI_fortify_hunan }
+		x = 3
+		y = 5
+		cost = 10
+		completion_reward = {
+			605 = {
+				custom_effect_tooltip = CHI_fortify_cities_loc3
+				hidden_effect = {
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 4925
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 5
+						province = 6999
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
 	#Internal defense
 	focus = {
 		id = CHI_history_of_revolts
@@ -1332,6 +1402,39 @@ focus_tree = {
 				add_to_war = { targeted_alliance = CHI enemy = FRA }
 				add_to_war = { targeted_alliance = CHI enemy = POR }
 				add_to_war = { targeted_alliance = CHI enemy = HOL }
+		}
+	}
+		focus = {
+		id = CHI_modernize_industry
+		icon = GFX_goal_generic_construct_military
+		x = 33
+		y = 0
+		cost = 10
+		completion_reward = {
+			605 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			613 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			620 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 }
